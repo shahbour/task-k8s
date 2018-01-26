@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: task-launcher
+#  cloud:
+#    config:
+#      uri: http://${CONFIG_SERVICE_HOST:localhost}:${CONFIG_SERVICE_PORT:8888}

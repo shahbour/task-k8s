@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: task-launcher-bus
+  rabbitmq:
+    host: ${RABBITMQ_SERVICE_HOST}
+    port: ${RABBITMQ_SERVICE_PORT}
+
+server:
+  port: 8080

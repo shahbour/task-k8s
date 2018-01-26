@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: task-launcher-bus
+          group: prod
+    deployer:
+      kubernetes:
+        entry-point-style: boot  #In production I changed this to exec as my task (spring-batch) read some properties from command line
+        namespace: rate-jobs
+  rabbitmq:
+    host: ${RABBITMQ_SERVICE_HOST}
+    port: ${RABBITMQ_SERVICE_PORT}
